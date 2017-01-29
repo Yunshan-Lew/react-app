@@ -1,6 +1,6 @@
-// ÊôĞÔ¸ÄĞ´£ºclass => className£¬for => htmlFor
+// å±æ€§æ”¹å†™ï¼šclass => classNameï¼Œfor => htmlFor
 
-// ÒıÈë×é¼ş²¢¹ÒÔØ
+// å¼•å…¥ç»„ä»¶å¹¶æŒ‚è½½
 import React from "react";
 import { render } from "react-dom";
 import fucker from "./components/fucker"
@@ -8,26 +8,26 @@ import fucker from "./components/fucker"
 var the_fucker = <fucker></fucker>;
 render(the_fucker, "#app");
 
-// Ê¹ÓÃJS±í´ïÊ½²Ù×÷ÊôĞÔ
+// ä½¿ç”¨JSè¡¨è¾¾å¼æ“ä½œå±æ€§
 var person = <person name={ window.isLoggedIn ? window.name : '' } />;
 
-// Ê¹ÓÃJS±í´ïÊ½²Ù×÷×é¼ş
+// ä½¿ç”¨JSè¡¨è¾¾å¼æ“ä½œç»„ä»¶
 var content = <container>{ window.isLoggedIn ? <Nav/> : <Login/> }</container>;
 
-// ÊôĞÔÀ©É¢ ¶ÔÏóÕ¹¿ªÉèÖÃ³ÉÊôĞÔ ÊôĞÔÏàÍ¬ÒÔºó³öÏÖµÄÎª×¼
+// å±æ€§æ‰©æ•£ å¯¹è±¡å±•å¼€è®¾ç½®æˆå±æ€§ å±æ€§ç›¸åŒä»¥åå‡ºç°çš„ä¸ºå‡†
 var props = { foo: 'default' };
 var component = <component { ...props } foo={ 'override' } />;
 
-// styleµÄÓÃ·¨
+// styleçš„ç”¨æ³•
 <pencil style={{ zIndex: 10 }} />
 
-// props state ÊôĞÔÓë×´Ì¬£¬this.setState({ key: value })ÉèÖÃ×´Ì¬
+// props state å±æ€§ä¸çŠ¶æ€ï¼Œthis.setState({ key: value })è®¾ç½®çŠ¶æ€
 
-// ÈÃ×é¼ş¾¡¿ÉÄÜµØÉÙ×´Ì¬state
+// è®©ç»„ä»¶å°½å¯èƒ½åœ°å°‘çŠ¶æ€state
 
-// ÎŞ×´Ì¬×é¼ş£¬¿ªÏúºÜµÍ£¬Èç¹û¿ÉÄÜµÄ»°¾¡Á¿Ê¹ÓÃÎŞ×´Ì¬×é¼ş
+// æ— çŠ¶æ€ç»„ä»¶ï¼Œå¼€é”€å¾ˆä½ï¼Œå¦‚æœå¯èƒ½çš„è¯å°½é‡ä½¿ç”¨æ— çŠ¶æ€ç»„ä»¶
 
-/********* Ò»°ãÓÉµ¥Ò»º¯Êı¹¹³É *********/
+/********* ä¸€èˆ¬ç”±å•ä¸€å‡½æ•°æ„æˆ *********/
 
 function HelloMessage(props){
 	return (
@@ -41,7 +41,7 @@ render(<HelloMessage name="John" />, "#app");
 
 /************************************/
 
-// ³£ÓÃ×é¼şÉúÃüÖÜÆÚ
+// å¸¸ç”¨ç»„ä»¶ç”Ÿå‘½å‘¨æœŸ
 componentWillMount(){
 	
 }
@@ -59,33 +59,33 @@ componentWillUnmount(){
 }
 
 getInitialState(){ 
-	// ³õÊ¼»¯this.stateµÄÖµ£¬Ö»ÔÚ×é¼ş×°ÔØÖ®Ç°µ÷ÓÃÒ»´Î
+	// åˆå§‹åŒ–this.stateçš„å€¼ï¼Œåªåœ¨ç»„ä»¶è£…è½½ä¹‹å‰è°ƒç”¨ä¸€æ¬¡
 }
 
-// ×èÖ¹ÊÂ¼şÃ°Åİ
+// é˜»æ­¢äº‹ä»¶å†’æ³¡
 e.stopPropagation();
 e.nativeEvent.stopImmediatePropagation()
 
-// ²ÎÊı´«µİÊ¹ÓÃ.bind(this, arg1, arg2, ...);
+// å‚æ•°ä¼ é€’ä½¿ç”¨.bind(this, arg1, arg2, ...);
 
-// Í¨¹ıfindDOMNode()·½·¨ÄÃµ½×é¼şµÄDOMÔªËØ
+// é€šè¿‡findDOMNode()æ–¹æ³•æ‹¿åˆ°ç»„ä»¶çš„DOMå…ƒç´ 
 
-// Í¨¹ırefºÍthis.refs·Ö±ğ½øĞĞ±ê¼ÇºÍÒıÓÃ
+// é€šè¿‡refå’Œthis.refsåˆ†åˆ«è¿›è¡Œæ ‡è®°å’Œå¼•ç”¨
 
 /*
-	Èç¹û ref ÊÇÉèÖÃÔÚÔ­ÉúHTMLÔªËØÉÏ£¬ÄÃµ½µÄ¾ÍÊÇDOMÔªËØ
-	Èç¹ûÉèÖÃÔÚ×Ô¶¨Òå×é¼şÉÏ£¬ÄÃµ½µÄ¾ÍÊÇ×é¼şÊµÀı£¬ÕâÊ±ºò¾ÍĞèÒªÍ¨¹ıfindDOMNodeÀ´ÄÃµ½×é¼şµÄDOMÔªËØ
-	²»ÒªÔÚrender»òÕßrenderÖ®Ç°·ÃÎÊthis.refs
+	å¦‚æœ ref æ˜¯è®¾ç½®åœ¨åŸç”ŸHTMLå…ƒç´ ä¸Šï¼Œæ‹¿åˆ°çš„å°±æ˜¯DOMå…ƒç´ 
+	å¦‚æœè®¾ç½®åœ¨è‡ªå®šä¹‰ç»„ä»¶ä¸Šï¼Œæ‹¿åˆ°çš„å°±æ˜¯ç»„ä»¶å®ä¾‹ï¼Œè¿™æ—¶å€™å°±éœ€è¦é€šè¿‡findDOMNodeæ¥æ‹¿åˆ°ç»„ä»¶çš„DOMå…ƒç´ 
+	ä¸è¦åœ¨renderæˆ–è€…renderä¹‹å‰è®¿é—®this.refs
 */
 
-// this.props.children ¸¸×é¼şÖĞ»ñÈ¡×Ó×é¼ş
+// this.props.children çˆ¶ç»„ä»¶ä¸­è·å–å­ç»„ä»¶
 
 
 /****************************** React Router ************************/
 
-<Route path="/hello/:id">         	// Æ¥Åä /hello/michael ºÍ /hello/ryan
-<Route path="/hello(/:id)">     	// Æ¥Åä /hello, /hello/michael ºÍ /hello/ryan
-<Route path="/files/*.*">         	// Æ¥Åä /files/hello.jpg ºÍ /files/path/to/hello.jpg
+<Route path="/hello/:id">         	// åŒ¹é… /hello/michael å’Œ /hello/ryan
+<Route path="/hello(/:id)">     	// åŒ¹é… /hello, /hello/michael å’Œ /hello/ryan
+<Route path="/files/*.*">         	// åŒ¹é… /files/hello.jpg å’Œ /files/path/to/hello.jpg
 
-// ÉèÖÃÀë¿ª¹³×Ó
+// è®¾ç½®ç¦»å¼€é’©å­
 this.props.router.setRouteLeaveHook(this.props.route, this.routerWillLeave)
