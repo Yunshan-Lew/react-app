@@ -245,9 +245,11 @@ kid.prototype.__proto__ = dad.prototype
 
 ### Generator函数
 ```js
-/* Generator 函数是一个状态机，封装了多个内部状态。 */
-/* Generator是分段执行的，yield语句是暂停执行的标记，next方法可以恢复执行。 */
-/* 一个Generator函数，只有调用next方法时才会执行。 */
+/* 
+Generator 函数是一个状态机，封装了多个内部状态。
+Generator是分段执行的，yield语句是暂停执行的标记，next方法可以恢复执行。
+一个Generator函数，只有调用next方法时才会执行。 
+*/
 
 function* hwGenerator{
 	yield 'hello'
