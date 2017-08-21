@@ -229,7 +229,7 @@ let afterFilter = [1, 2, 3].filter(function(v){
 })
 
 // 改变数组的每个元素
-let afterMap = [1, 2, 3].map(function(){
+let afterMap = [1, 2, 3].map(function(v){
 	var result = v * 2
 	return result
 })
@@ -293,9 +293,7 @@ async function asyncPrint(value) {
 
 asyncPrint('hello world')
 
-
 // 4. await命令后面是一个Promise对象。如果不是，会被转成一个立即resolve的Promise对象
-
 
 async function f() {
 	/*
@@ -309,9 +307,7 @@ async function f() {
 
 f().then( v => console.log(v) )
 
-
 // 5. 只要一个await语句后面的Promise变为reject，那么整个async函数都会中断执行
-
 
 async function logInOrder(urls) {
 	// 并发读取远程URL
@@ -320,7 +316,7 @@ async function logInOrder(urls) {
 		return response.text()
 	})
 	// 按次序输出
-	for (const textPromise of textPromises) {
+	for (let textPromise of textPromises) {
 		console.log(await textPromise)
 	}
 }
@@ -337,7 +333,7 @@ async function logInOrder(urls){
 async function print(urls){
 	let textPromises = await logInOrder(urls)
 	// 按次序输出
-	for (const textPromise of textPromises) {
+	for (let textPromise of textPromises) {
 		console.log(textPromise)
 	}
 }
