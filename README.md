@@ -184,13 +184,13 @@ console.log(counter) // 4
 ```
 
 ```txt
-	1. const命令只在声明所在的块级作用域内有效。
-	2. const命令只是保证变量名指向的地址不变，并不保证该地址的数据不变。
+1. const命令只在声明所在的块级作用域内有效。
+2. const命令只是保证变量名指向的地址不变，并不保证该地址的数据不变。
 ```
 
 ```txt
-	1. var命令和function命令声明的全局变量，依旧是顶层对象的属性。
-	2. let命令、const命令、class命令声明的全局变量，不属于顶层对象的属性。
+1. var命令和function命令声明的全局变量，依旧是顶层对象的属性。
+2. let命令、const命令、class命令声明的全局变量，不属于顶层对象的属性。
 ```
 
 ### 反引号（`）和字符串插值 ${}：
@@ -201,10 +201,10 @@ console.log(`Your name is ${first} ${last}.`)
 ```
 
 ```txt
-	箭头函数：
-	1. 函数体内的this对象，就是定义时所在的对象，而不是调用时所在的对象。
-	2. 不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
-	3. 如果箭头函数直接返回一个对象，必须在对象外面加上括号。
+箭头函数：
+1. 函数体内的this对象，就是定义时所在的对象，而不是调用时所在的对象。
+2. 不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
+3. 如果箭头函数直接返回一个对象，必须在对象外面加上括号。
 ```
 
 ```js
@@ -273,9 +273,9 @@ hw.next()
 ### async函数
 ```js
 /*
-	1. async函数返回一个Promise对象
-	2. 执行时遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句
-	3. async函数返回的是Promise对象，可以作为await命令的参数
+1. async函数返回一个Promise对象
+2. 执行时遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句
+3. async函数返回的是Promise对象，可以作为await命令的参数
 */
 
 async function timeout(ms) {
@@ -291,9 +291,9 @@ async function asyncPrint(value) {
 
 asyncPrint('hello world')
 
-/*
-	4. await命令后面是一个Promise对象。如果不是，会被转成一个立即resolve的Promise对象
-*/
+
+// 4. await命令后面是一个Promise对象。如果不是，会被转成一个立即resolve的Promise对象
+
 
 async function f() {
 	/*
@@ -307,9 +307,9 @@ async function f() {
 
 f().then( v => console.log(v) )
 
-/*
-	5. 只要一个await语句后面的Promise变为reject，那么整个async函数都会中断执行
-*/
+
+// 5. 只要一个await语句后面的Promise变为reject，那么整个async函数都会中断执行
+
 
 async function logInOrder(urls) {
 	// 并发读取远程URL
