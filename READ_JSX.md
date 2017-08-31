@@ -88,8 +88,14 @@ componentWillUnmount(){
 
 ### 阻止事件冒泡
 ```jsx
-e.stopPropagation()
-e.nativeEvent.stopImmediatePropagation()
+React 实现了一个“合成事件”层（synthetic event system）：
+
+handleClick(param, e) {
+    // 合成事件
+	e.stopPropagation()
+	// 原生事件
+	e.nativeEvent.stopImmediatePropagation()
+}
 ```
 
 ### 参数传递使用.bind(this, arg1, arg2, ...)
