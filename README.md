@@ -229,6 +229,9 @@ let afterFilter = [1, 2, 3].filter(function(v){
 	return result
 })
 
+// 查询元素（第一个）
+[1, 2, 3].find( item => item < 2 ) // 1
+
 // 改变数组的每个元素
 let afterMap = [1, 2, 3].map(function(v){
 	var result = v * 2
