@@ -282,6 +282,7 @@ hw.next()
 1. async函数返回一个Promise对象
 2. 执行时遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句
 3. async函数返回的是Promise对象，可以作为await命令的参数
+4. async可以将数个Promise的书写方式由【链式/内嵌】改为【并列】
 */
 
 async function timeout(ms) {
