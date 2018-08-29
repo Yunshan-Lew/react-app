@@ -285,18 +285,18 @@ hw.next()
 4. async可以将数个Promise的书写方式由【链式/内嵌】改为【并列】
 */
 
-async function timeout(ms) {
-	await new Promise((resolve) => {
+function timeout(ms) {
+	return new Promise((resolve) => {
 		setTimeout(resolve, ms)
 	})
 }
 
-async function asyncPrint(value) {
-	await timeout(300)
+async function asyncPrint(value, ms) {
+	await timeout(ms)
 	console.log(value)
 }
 
-asyncPrint('hello world')
+asyncPrint('hello world', 300)
 
 // 4. await命令后面是一个Promise对象。如果不是，会被转成一个立即resolve的Promise对象
 
