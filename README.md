@@ -344,7 +344,7 @@ async function print(urls){
 }
 ```
 
-###Promise.all
+### Promise.all
 ```js
 /* Promise.all异步加载图片 */
 let promises = ['/2.png', '/3.png', '/5.png', '/7.png', '/11.png', '/13.png'].map(item => {
