@@ -343,3 +343,26 @@ async function print(urls){
 	}
 }
 ```
+
+###Promise.all
+```js
+/* Promise.all异步加载图片 */
+let promises = ['/2.png', '/3.png', '/5.png', '/7.png', '/11.png', '/13.png'].map(item => {
+  return new Promise((resolve, reject) => {
+		return resolve(item)
+	})
+	.then( result => {
+		let img = new Image()
+		img.src = result
+		return img
+	})
+	.catch( error => new Error(`报错：${ error }`) )
+})
+
+Promise.all(promises)
+.then(result => result.forEach( (item, index) => {
+	let body = document.querySelector('body')
+  body.appendChild(item)
+} ))
+.catch(error => console.log(error))
+```
